@@ -20,7 +20,7 @@ function SearchBar({ setCurrent, current }) {
 
                 >
                     <Input variant="outline"
-                        placeholder="Type hospital name "
+                        placeholder="Search hospitals in Rajkot"
                         borderRadius="full"
                         // borderColor="white"
                         focusBorderColor="#4FD1C5"
