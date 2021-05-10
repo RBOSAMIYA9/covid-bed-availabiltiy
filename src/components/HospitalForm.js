@@ -18,6 +18,8 @@ export default function HospitalForm() {
 
         // console.log(data)
         data.whatsappNo = "+91" + data.whatsappNo
+        data.adminWhatsappNo = "+91" + data.adminWhatsappNo
+        data.contactNo = "+91" + data.contactNo
         // console.log("after adding",data)
         setFilled(true);
         addHospital(data)

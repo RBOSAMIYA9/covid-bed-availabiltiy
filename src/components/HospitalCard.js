@@ -64,7 +64,7 @@ function HospitalCard({ hospitalData }) {
 
                                             <AccordionIcon mr={3} />
                                             <Text as="span"> {hospitalData.data.hospitalName}  &nbsp;</Text>
-                                            <a target="_blank" rel="noreferrer" href={`https://api.whatsapp.com/send?phone=91${hospitalData.data.whatsappNo}&text=Hi`}>
+                                            <a target="_blank" rel="noreferrer" href={`https://api.whatsapp.com/send?phone=${hospitalData.data.whatsappNo}&text=Hi`}>
                                                 <IoLogoWhatsapp
                                                     size="25px"
                                                     mx={2} color="green" as="span" />
