@@ -1,4 +1,4 @@
-import { Box, Input, Center, Image } from '@chakra-ui/react'
+import { Box, Input} from '@chakra-ui/react'
 import React from 'react'
 import '../custom.css'
 import hospitalImage from './hospitalBg.jpg'

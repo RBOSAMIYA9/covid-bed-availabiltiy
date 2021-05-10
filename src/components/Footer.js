@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text, Heading, useColorMode } from '@chakra-ui/react'
+import { Box, Text, Heading } from '@chakra-ui/react'
 
 
 function Footer() {
