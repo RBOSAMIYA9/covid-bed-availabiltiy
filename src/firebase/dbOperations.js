@@ -45,7 +45,7 @@ const addHospital = (data) => {
 const updateById = (id, data) => {
     return new Promise((resolve, reject) => {
         const collectionRef = projectFirestore.collection("hospitalData");
-        collectionRef.doc(id).update(data).then(
+        collectionRef.doc(id).update({...data,updatedAt:timeStamp()}).then(
             resolve("updated")
         ).catch((e) => reject("failed to update"))
     })

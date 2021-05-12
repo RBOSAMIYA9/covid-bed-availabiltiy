@@ -46,6 +46,7 @@ function AdminHospitalCard({ data }) {
         formData.whatsappNo = "+91" + formData.whatsappNo
         formData.adminWhatsappNo = "+91" + formData.adminWhatsappNo
         formData.contactNo = "+91" + formData.contactNo
+        
         updateById(data.id, formData).then((result) => {
             console.log("update result", result);
         }).catch((e) => console.log("error:", e))
