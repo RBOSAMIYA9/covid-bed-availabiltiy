@@ -13,8 +13,9 @@ import {
 } from "react-router-dom";
 import HospitalForm from './components/HospitalForm'
 import Footer from './components/Footer'
-// import { ColorModeSwitcher } from './ColorModeSwitcher';
-// import { Logo } from './Logo';
+import Dashboard from './components/Dashboard'
+
+import Header from './components/Header'
 
 function App() {
   return (
@@ -22,15 +23,21 @@ function App() {
       <ChakraProvider theme={theme}>
         <Box textAlign="center" fontSize="xl">
           {/* <ColorModeSwitcher justifySelf="flex-end" /> */}
+          <Header />
           <Switch>
             <Route path="/hospitalForm">
               <HospitalForm />
             </Route>
-            <Route path="/">
+
+            <Route path="/admin" exact>
+              <Dashboard />
+            </Route>
+
+            <Route path="/" exact>
               <Home />
             </Route>
           </Switch>
-          <Footer/>
+          <Footer />
         </Box>
       </ChakraProvider>
     </Router>

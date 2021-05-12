@@ -5,7 +5,7 @@ import {
     Button, Center, FormLabel, FormHelperText,
     Alert, AlertIcon, AlertTitle, AlertDescription
 } from '@chakra-ui/react'
-import Header from './Header'
+// import Header from './Header'
 import { addHospital } from '../firebase/dbOperations'
 
 export default function HospitalForm() {
@@ -19,7 +19,7 @@ export default function HospitalForm() {
         // console.log(data)
         data.whatsappNo = "+91" + data.whatsappNo
         data.adminWhatsappNo = "+91" + data.adminWhatsappNo
-        data.contactNo = "+91" + data.contactNo
+        data.contactNo = "+91" + data.contactNo                                                         
         // console.log("after adding",data)
         setFilled(true);
         addHospital(data)
@@ -28,10 +28,10 @@ export default function HospitalForm() {
     const [filled, setFilled] = useState(false)
     return (
         <>
-            <Header />
+            
             {filled ? (<>
                 <Center>
-                    <Box width="50%" my={10}>
+                    <Box width={["90%","80%","50%","50%"]} my={10}>
                         <Alert
                             status="success"
                             variant="subtle"
@@ -131,7 +131,7 @@ export default function HospitalForm() {
                                 </FormControl>
 
                                 <FormControl mt={6}>
-                                    <FormLabel> Total ICU + ventolator Beds</FormLabel>
+                                    <FormLabel> Total ICU + ventilator Beds</FormLabel>
                                     <Input type="number" placeholder="icuVentilatorBeds" {...register("icuVentilatorBeds", { maxLength: 3 })} />
                                     {errors.icuVentilatorBeds && <Text color="red">Please enterICU + ventolator Beds!</Text>}
                                 </FormControl>

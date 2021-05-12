@@ -13,8 +13,13 @@ import { IoLogoWhatsapp } from 'react-icons/all'
 import { MdUpdate } from 'react-icons/md'
 import * as moment from 'moment';
 
-function HospitalCard({ hospitalData }) {
 
+
+function HospitalCard({ hospitalData }) {
+    var messageInEnglish = "Please fill the following details\n\nRequirement:\n\nPatient\nName:\nAge:\nLocation:\nRelative Name:\nRelative Mobile No:\n\nHospital Name:\n\nSPO2:\n(oxygen level)\nD-DIMER:\nCRP:\nCT scan score:\n\nCo morbidities(diabetes,heart prob, kidney prob, major illness, cancer):\n\nPositive date:\n\nOther:\n\n*Please attach all the latest reports*";
+    var messageInGuj = "\n\nગુજરાતી\n\nકૃપા કરીને આ વિગતો ભરો\n\nઆવશ્યકતા:\n\nદર્દીનું નામ:\nઉંમર:\nગામ/શહેર:\nસંબંધિ નામ:\nસંબંધિ મોબાઇલ નંબર:\n\nહોસ્પિટલ નામ:\n\nએસપીઓ2 :\n(ઓક્સિજન સ્તર)\nડી-ડિમર:\nસીઆરપી:\nસીટી સ્કેન સ્કોર:\n\nઅન્ય રોગ (ડાયાબિટીસ,હાર્ટપ્રોબલેમ,કિડની પ્રોબલેમ,મોટી બીમારી,કેન્સર,અન્ય):\n\nપોઝિટિવ તારીખ:\n\nઅન્ય:\nકૃપા કરીને તમામ રિપોર્ટ જોડો\n\n\n*This is auto generated message by CoFight*\n\nhttp://cofight.ravindrabosamiya.tech/\n"
+    var resEng = encodeURI(messageInEnglish);
+    var resGuj = encodeURI(messageInGuj);
     const colorProvider = (occupied, total) => {
         var percentage = ((occupied / total) * 100)
         if (percentage <= 25)
@@ -64,7 +69,7 @@ function HospitalCard({ hospitalData }) {
 
                                             <AccordionIcon mr={3} />
                                             <Text as="span"> {hospitalData.data.hospitalName}  &nbsp;</Text>
-                                            <a target="_blank" rel="noreferrer" href={`https://api.whatsapp.com/send?phone=${hospitalData.data.whatsappNo}&text=Hi`}>
+                                            <a target="_blank" rel="noreferrer" href={`https://api.whatsapp.com/send?phone=${hospitalData.data.whatsappNo}&text=${resEng+resGuj}`}>
                                                 <IoLogoWhatsapp
                                                     size="25px"
                                                     mx={2} color="green" as="span" />
