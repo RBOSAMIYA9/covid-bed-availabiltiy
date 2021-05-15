@@ -17,7 +17,7 @@ import * as moment from 'moment';
 
 function HospitalCard({ hospitalData }) {
     var messageInEnglish = "Please fill the following details\n\nRequirement:\n\nPatient\nName:\nAge:\nLocation:\nRelative Name:\nRelative Mobile No:\n\nHospital Name:\n\nSPO2:\n(oxygen level)\nD-DIMER:\nCRP:\nCT scan score:\n\nCo morbidities(diabetes,heart prob, kidney prob, major illness, cancer):\n\nPositive date:\n\nOther:\n\n*Please attach all the latest reports*";
-    var messageInGuj = "\n\nગુજરાતી\n\nકૃપા કરીને આ વિગતો ભરો\n\nઆવશ્યકતા:\n\nદર્દીનું નામ:\nઉંમર:\nગામ/શહેર:\nસંબંધિ નામ:\nસંબંધિ મોબાઇલ નંબર:\n\nહોસ્પિટલ નામ:\n\nએસપીઓ2 :\n(ઓક્સિજન સ્તર)\nડી-ડિમર:\nસીઆરપી:\nસીટી સ્કેન સ્કોર:\n\nઅન્ય રોગ (ડાયાબિટીસ,હાર્ટપ્રોબલેમ,કિડની પ્રોબલેમ,મોટી બીમારી,કેન્સર,અન્ય):\n\nપોઝિટિવ તારીખ:\n\nઅન્ય:\nકૃપા કરીને તમામ રિપોર્ટ જોડો\n\n\n*This is auto generated message by CoFight*\n\nhttp://cofight.ravindrabosamiya.tech/\n"
+    var messageInGuj = "\n\nગુજરાતી\n\nકૃપા કરીને આ વિગતો ભરો\n\nઆવશ્યકતા:\n\nદર્દીનું નામ:\nઉંમર:\nગામ/શહેર:\nસંબંધિ નામ:\nસંબંધિ મોબાઇલ નંબર:\n\nહોસ્પિટલ નામ:\n\nએસપીઓ2 :\n(ઓક્સિજન સ્તર)\nડી-ડિમર:\nસીઆરપી:\nસીટી સ્કેન સ્કોર:\n\nઅન્ય રોગ (ડાયાબિટીસ,હાર્ટપ્રોબલેમ,કિડની પ્રોબલેમ,મોટી બીમારી,કેન્સર,અન્ય):\n\nપોઝિટિવ તારીખ:\n\nઅન્ય:\nકૃપા કરીને તમામ રિપોર્ટ જોડો\n\n\n*This is auto generated message by CoFight*\n\nhttp://cofight.ravindrabosamiya.tech/\n\n*Scroll this message and fill details to send hospital*\n\n*આ સંદેશને સ્ક્રોલ કરો અને હોસ્પિટલમાં મોકલવા માટે ની વિગતો ભરો*"
     var resEng = encodeURI(messageInEnglish);
     var resGuj = encodeURI(messageInGuj);
     const colorProvider = (occupied, total) => {
