@@ -5,7 +5,7 @@ import {
     Button, Center, FormLabel, FormHelperText,
     Alert, AlertIcon, AlertTitle, AlertDescription
 } from '@chakra-ui/react'
-// import Header from './Header'
+import Header from './Header'
 import { addHospital } from '../firebase/dbOperations'
 
 export default function HospitalForm() {
@@ -27,8 +27,8 @@ export default function HospitalForm() {
     console.log(errors);
     const [filled, setFilled] = useState(false)
     return (
-        <>
-
+        <> 
+            <Header showHeaderContent={true} />
             {filled ? (<>
                 <Center>
                     <Box my={10} width={["90%","80%","50%","50%"]}>

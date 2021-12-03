@@ -3,6 +3,7 @@ import { Box, Center, Button, VStack } from '@chakra-ui/react'
 import SearchBar from './SearchBar'
 import AdminHospitalContainer from './AdminHospitalContainer'
 import Login from './LoginPage'
+import Header from './Header'
 
 function Dashboard() {
     const [current, setCurrent] = React.useState("");
@@ -16,6 +17,7 @@ function Dashboard() {
     }
     return (
         <>
+        <Header showHeaderContent={false} />
             {
                 user ? (
                     <Box>

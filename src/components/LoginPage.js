@@ -26,6 +26,13 @@ function LoginPage({ setUser }) {
         }
     }
     console.log(errors);
+    const guestLogin = () => {
+        setError(false)
+        console.log("correct");
+        localStorage.setItem('user', JSON.stringify({ userName: "ravindra" }))
+        // setLoggedIn(true)
+        setUser({ userName: "ravindra" })
+    }
 
     return (
         <>
@@ -38,20 +45,22 @@ function LoginPage({ setUser }) {
                         <FormControl mt={6} isRequired="true">
                             <FormLabel>
                                 User Name
-                    </FormLabel>
+                            </FormLabel>
                             <Input type="text"  {...register("userName", { required: true })} />
                         </FormControl>
                         <FormControl mt={6} isRequired="true">
                             <FormLabel>
                                 Password
-                </FormLabel>
+                            </FormLabel>
                             <Input type="password"  {...register("password", { required: true })} />
                         </FormControl>
                         {error && errorMessage}
                         <Button mt={6} colorScheme="green" type="submit">
                             Login
-                </Button>
+                        </Button>
+
                     </form>
+                    <Button mt={6} colorScheme="gray" onClick={guestLogin} > Guest login</Button>
 
 
                 </Box>

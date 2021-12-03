@@ -15,7 +15,7 @@ import HospitalForm from './components/HospitalForm'
 import Footer from './components/Footer'
 import Dashboard from './components/Dashboard'
 
-import Header from './components/Header'
+// import Header from './components/Header'
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       <ChakraProvider theme={theme}>
         <Box textAlign="center" fontSize="xl">
           {/* <ColorModeSwitcher justifySelf="flex-end" /> */}
-          <Header />
+          {/* <Header /> */}
           <Switch>
             <Route path="/hospitalForm">
               <HospitalForm />

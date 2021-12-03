@@ -1,6 +1,6 @@
 import { Box, Center, AlertIcon, Alert, VStack } from '@chakra-ui/react'
 import React from 'react'
-// import Header from './Header'
+import Header from './Header'
 import SearchBar from './SearchBar'
 import HospitalContainer from './HospitalContainer'
 
@@ -9,7 +9,7 @@ function Home() {
     const [current, setCurrent] = React.useState("");
     return (
         <div>
-            {/* <Header /> */}
+            <Header showHeaderContent={true} />
             <Box >
                 <Center>
                     <VStack mt={4} minWidth="full" >
